@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package double;
+
+message DoubleStringRequest {
+	string input = 1;
+}
+
+message DoubleStringReply {
+	string output = 1;
+}
+
+service DoubleService {
+	rpc DoubleString(DoubleStringRequest) returns (DoubleStringReply) {}
+}
